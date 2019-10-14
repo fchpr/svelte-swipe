@@ -80,7 +80,8 @@
   
   
   onDestroy(()=>{
-    window.removeEventListener('resize', update);
+    if (process.browser) 
+      window.removeEventListener('resize', update);
   })
 
   function moveHandler(e){
